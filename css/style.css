@@ -111,3 +111,45 @@ margin-right: 15px;
 #info .info-item .info-item-desc.phone .mobile{
     margin-top: 0px;
 }
+
+/* slider */
+
+#slider{
+    background-image: url(../images/p1.jpg);
+    background-size: cover;
+    height: 565px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#slider .overlay{
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#slider .slider-desc{
+    width: 100%;
+    height: 565px;
+    font-size: 35px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#slider .slider-desc .typed{
+    margin-top: 20px;
+}
+
+
+#slider .slider-desc .typed span{
+    font-weight: 900;
+    font-size: 30px;
+    color: #faa000;
+}
