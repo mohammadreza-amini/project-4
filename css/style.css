@@ -6,6 +6,10 @@
     url("../Font/Vazir.woff2") format("woff");
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     font-family: Vazir;
     direction: rtl;
@@ -21,6 +25,8 @@ body{
 .row{
     display: flex;
 }
+
+/* header */
 
 #header-top{
     width: 100%;
@@ -152,4 +158,65 @@ margin-right: 15px;
     font-weight: 900;
     font-size: 30px;
     color: #faa000;
+}
+
+/* header */
+
+header{
+    width: 100%;
+    background-color: #131313;
+    display: flex;
+    height: 10vh;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+header ul{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header ul li::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #faa000;
+    position: absolute;
+    bottom: 13px;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+    -moz-transition: width .3s;
+    -ms-transition: width .3s;
+    -o-transition: width .3s;
+}
+
+header ul li:hover::before{
+    width: 100%;
+}
+
+header ul li a{
+    color: #fff;
+    font-size: 15px;
+}
+
+header .brand-logo{
+    width: 7%;
+}
+
+header .brand-logo img{
+    width: 100%;
+    height: 100%;
 }
