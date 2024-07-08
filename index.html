@@ -147,20 +147,22 @@
     <section id="service">
         <div class="overlay">
             <div class="container">
-                <h2>خدمات</h2>
+                <div class="service-title">
+                    <h2>خدمات</h2>
+                </div>
                 <div class="row">
                     <div class="service">
                         <div class="tab-button">
                             <ul>
-                                <li>نقشه کشی <i class="fas fa-ruler-vertical"></i></li>
-                                <li>داربست <i class="fas fa-pencil-ruler"></i></li>
-                                <li>نقاشی <i class="fas fa-paint-roller"></i></li>
-                                <li>بتن ریزی <i class="fas fa-hard-hat"></i></li>
-                                <li>تخریب <i class="fas fa-hammer"></i></li>
+                                <li id="tab-one" class="active">نقشه کشی <i class="fas fa-ruler-vertical"></i></li>
+                                <li id="tab-two">داربست <i class="fas fa-pencil-ruler"></i></li>
+                                <li id="tab-three">نقاشی <i class="fas fa-paint-roller"></i></li>
+                                <li id="tab-four">بتن ریزی <i class="fas fa-hard-hat"></i></li>
+                                <li id="tab-five">تخریب <i class="fas fa-hammer"></i></li>
                             </ul>
                         </div>
                         <div class="tab-content">
-                            <div class="tab">
+                            <div class="tab hide active" id="tab-one-content">
                                 <div class="content">
                                     <div class="content-title">
                                         <h3>نقشه کشی ساختمان</h3>
@@ -177,12 +179,13 @@
                                     <a href="">بیشتر بدانید</a>
                                 </div>
                             </div>
-                            <div class="tab hide">
+                            <div class="tab hide" id="tab-two-content">
                                 <div class="content">
                                     <div class="content-title">
                                         <h3>داربست</h3>
                                         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
-                                            طراحان گرافیک است. چاپگرهامتون بلکه روزنا و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+                                            طراحان گرافیک است. چاپگرهامتون بلکه روزنا و مجله در ستون و سطرآنچنان که لازم
+                                            است و برای شرایط فعلی تکنولوژی مورد نیاز
                                         </p>
                                     </div>
                                     <div class="conten-img">
@@ -193,7 +196,7 @@
                                     <a href="">بیشتر بدانید</a>
                                 </div>
                             </div>
-                            <div class="tab hide">
+                            <div class="tab hide" id="tab-three-content">
                                 <div class="content">
                                     <div class="content-title">
                                         <h3>نقاشی</h3>
@@ -212,7 +215,7 @@
                                     <a href="">بیشتر بدانید</a>
                                 </div>
                             </div>
-                            <div class="tab hide">
+                            <div class="tab hide" id="tab-four-content">
                                 <div class="content">
                                     <div class="content-title">
                                         <h3>بتن ریزی</h3>
@@ -231,7 +234,7 @@
                                     <a href="">بیشتر بدانید</a>
                                 </div>
                             </div>
-                            <div class="tab hide">
+                            <div class="tab hide" id="tab-five-content">
                                 <div class="content">
                                     <div class="content-title">
                                         <h3>تخریب</h3>
@@ -269,16 +272,26 @@
     <script src="./js/typed.min.js"></script>
     <script src="./js/all.min.js"></script>
     <script>
-        var typed = new Typed('#typed', {
-            strings: [
-                "با برترین مهندسین...",
-                "و به روز ترین ابزارها...",
-                "تضمین صد در صدی کار..."
-            ],
-            loop: true,
-            typeSpeed: 40,
-            backSpeed: 40,
-        });
+        $(document).ready(function () {
+            var typed = new Typed('#typed', {
+                strings: [
+                    "با برترین مهندسین...",
+                    "و به روز ترین ابزارها...",
+                    "تضمین صد در صدی کار..."
+                ],
+                loop: true,
+                typeSpeed: 40,
+                backSpeed: 40,
+            });
+
+            $('.tab-button').on('click', 'li', function () {
+                let tabmenu = $(this).attr('id');
+                $(this).addClass('active').siblings().removeClass('active');
+                $('#' + tabmenu + '-content').addClass('active').siblings().removeClass('active');
+
+            })
+
+        })
     </script>
 </body>
 
