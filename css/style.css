@@ -338,3 +338,95 @@ header .brand-logo img {
 #base-story .base-story .base-story-item div a {
   color: #000;
 }
+
+/* services */
+
+#service {
+  width: 100%;
+  background-image: url(../images/coverservice.png);
+  background-size: cover;
+  height: 350px;
+}
+
+#service .service {
+  display: flex;
+  flex-direction: column;
+}
+
+#service .tab-button {
+  width: 100%;
+  display: flex;
+  background-color: blue;
+}
+
+#service .tab-button ul {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  align-items: center;
+}
+
+#service .tab-button ul li {
+  width: 20%;
+  text-align: center;
+  border-left: 2px solid #faa000;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#service .tab-button ul li:nth-child(5) {
+  border: none;
+}
+
+#service .tab-content {
+  display: flex;
+}
+
+#service .tab-content .tab img {
+  width: 200px;
+}
+
+#service .tab-content .tab {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+}
+
+#service .tab-content .hide {
+  display: none;
+}
+
+#service .tab-content .tab .content {
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+}
+
+#service .tab-content .tab .content .content-title {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+#service .tab-content .tab .content .content-title h3 {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#service .tab-content .tab .content .conten-img {
+  width: 30%;
+  text-align: center;
+  background-color: aqua;
+}
+
+#service .tab-content .tab .content .conten-img img {
+  width: 85%;
+}
