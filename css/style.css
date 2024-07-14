@@ -1021,6 +1021,8 @@ header .brand-logo img {
   padding: 60px 0;
   background-attachment: fixed;
   display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 #footer .footer-about {
@@ -1121,6 +1123,7 @@ header .brand-logo img {
   /* align-items: center; */
   justify-content: space-between;
   padding-top: 23px;
+  margin-bottom: 25px;
 }
 
 
@@ -1194,4 +1197,80 @@ header .brand-logo img {
 #footer .footer-content .quick-access ul li a{
   text-decoration: none;
   color: #faa000;
+}
+
+#footer .footer-content .portfolio h3{
+  color: #faa000;
+  margin-bottom: 30px;
+}
+
+#footer .footer-content .portfolio ul{
+  width: 100%;
+}
+
+
+#footer .footer-content .portfolio ul li{
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #faa000;
+  padding-bottom: 16px;
+}
+
+#footer .footer-content .portfolio ul li a{
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer .footer-content .portfolio ul li:nth-child(3){
+  border-bottom: none;
+}
+
+#footer .footer-content .portfolio ul li a img{
+  width: 60px;
+}
+
+#footer .footer-content .portfolio ul li a .portfolio-content-title{
+  line-height: 23px;
+}
+
+#footer .footer-content .portfolio ul li a h5{
+  color: #faa000;
+}
+
+#footer .footer-content .portfolio ul li p{
+  font-size: 11px;
+  color: rgb(202, 202, 202);
+}
+
+#footer .copy-right{
+  text-align: center;
+  background-color: #252525;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0;
+  /* left: 0;
+  right: 0; */
+  width: 100%;
+}
+
+#footer .copy-right h5{
+  color: #fff;
+}
+
+#footer .copy-right p{
+  margin-top: 10px;
+  color: #fae9e9;
+  font-size: 13px;
+}
+
+#footer .copy-right svg{
+  margin: 0 5px;
+}
+
+#footer .copy-right svg.fa-code{
+  color: rgb(46, 46, 241);
+}
+
+#footer .copy-right svg.fa-heartbeat{
+  color: rgb(248, 68, 68);
 }
